@@ -28,10 +28,16 @@ export const MatchList: React.FC = () => {
           </div>
           <div>Stage: {m.stage} {m.group && `(Group ${m.group})`}</div>
           <div>
-            Model: 1 {m.prediction.prob_home_win.toFixed(2)} | X{" "}
-            {m.prediction.prob_draw.toFixed(2)} | 2{" "}
-            {m.prediction.prob_away_win.toFixed(2)} | Tip:{" "}
-            <strong>{m.prediction.recommended_outcome}</strong> ({m.prediction.confidence_score.toFixed(1)}%)
+            Probabilities: 1 {(m.prediction.prob_home_win * 100).toFixed(1)}% | X{" "}
+            {(m.prediction.prob_draw * 100).toFixed(1)}% | 2{" "}
+            {(m.prediction.prob_away_win * 100).toFixed(1)}%
+          </div>
+          <div>
+            Model tip: <strong>{m.prediction.recommended_outcome}</strong> (confidence margin{" "}
+            {m.prediction.confidence_score.toFixed(1)}%)
+          </div>
+          <div style={{ marginTop: "4px", color: "#444", fontSize: "0.95em" }}>
+            Why: {m.prediction.reason}
           </div>
           <TipForm matchId={m.id} />
         </div>

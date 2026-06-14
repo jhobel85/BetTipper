@@ -4,6 +4,7 @@ export type MatchPrediction = {
   prob_away_win: number;
   recommended_outcome: string;
   confidence_score: number;
+  reason: string;
 };
 
 export type Match = {

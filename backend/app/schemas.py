@@ -19,6 +19,7 @@ class MatchPrediction(BaseModel):
     prob_away_win: float
     recommended_outcome: str
     confidence_score: float
+    reason: str
 
 
 class MatchWithPrediction(MatchBase):

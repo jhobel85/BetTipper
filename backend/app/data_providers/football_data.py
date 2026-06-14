@@ -34,3 +34,16 @@ def save_wc_matches_raw(path: Path = RAW_OUTPUT, season: int = 2026) -> dict[str
 def get_matches(season: int = 2026) -> list[dict[str, Any]]:
     payload = get_wc_matches_raw(season=season)
     return payload.get("matches", [])
+
+
+def get_team_recent_matches(team_id: int, limit: int = 12) -> list[dict[str, Any]]:
+    url = f"{BASE_URL}/teams/{team_id}/matches"
+    response = requests.get(
+        url,
+        headers={"X-Auth-Token": API_KEY},
+        params={"status": "FINISHED", "limit": limit},
+        timeout=30,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    return payload.get("matches", [])

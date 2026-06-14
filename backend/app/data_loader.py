@@ -6,7 +6,7 @@ from typing import Any
 from sqlalchemy.orm import Session
 
 from .model import DEFAULT_PARAMS, MatchFeatures, predict_match
-from .models import Match, ModelPrediction, Team
+from .models import Match, ModelPrediction, Team, Tip, TipScore
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 TEAMS_PATH = DATA_DIR / "teams_ms2026.json"
@@ -55,6 +55,16 @@ def _home_advantage(home_team: Team) -> float:
     if home_team.fifa_code in HOST_FIFA_CODES:
         return 1.0
     return 0.0
+
+
+def reset_real_data_state(db: Session) -> None:
+    # Clear dependent rows first to satisfy FK constraints.
+    db.query(TipScore).delete()
+    db.query(Tip).delete()
+    db.query(ModelPrediction).delete()
+    db.query(Match).delete()
+    db.query(Team).delete()
+    db.commit()
 
 
 def load_teams_from_json(db: Session, path: Path = TEAMS_PATH) -> dict[str, int]:

@@ -61,9 +61,13 @@ def predict_match(features: MatchFeatures, params: ModelParams) -> dict:
     p1, px, p2 = outcome_probs(lambda_home, lambda_away)
 
     probs = {"1": p1, "X": px, "2": p2}
-    rec = max(probs, key=probs.get)
-    sorted_probs = sorted(probs.values(), reverse=True)
-    conf = (sorted_probs[0] - sorted_probs[1]) * 100 if len(sorted_probs) > 1 else 0.0
+    sorted_outcomes = sorted(probs.items(), key=lambda item: item[1], reverse=True)
+    top_outcome, top_prob = sorted_outcomes[0]
+    second_prob = sorted_outcomes[1][1] if len(sorted_outcomes) > 1 else 0.0
+    conf = (top_prob - second_prob) * 100
+
+    # Do not force a directional tip when model separation is negligible.
+    rec = "X" if conf < 1.0 else top_outcome
 
     return {
         "lambda_home": lambda_home,
