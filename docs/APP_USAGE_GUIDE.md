@@ -58,6 +58,24 @@ curl -X POST http://localhost:8000/api/v1/admin/recompute-predictions
 
 Also available:
 - `POST /api/v1/admin/matches/{match_id}/result` (stores result and recalculates user points)
+- `POST /api/v1/admin/update-bookmaker-tips` (refreshes bookmaker tips/odds-based suggestions)
+
+### OddsPortal source (preferred for bookmaker tips)
+
+Place CSV file at:
+
+- `backend/data/oddsportal_odds.csv`
+
+Supported header variants:
+- home: `home` / `home_team` / `team1`
+- away: `away` / `away_team` / `team2`
+- date: `date` / `match_date` / `kickoff_date` (YYYY-MM-DD recommended)
+- odds 1X2:
+  - home: `odds_home` / `home_odds` / `odd1` / `1`
+  - draw: `odds_draw` / `draw_odds` / `oddx` / `x`
+  - away: `odds_away` / `away_odds` / `odd2` / `2`
+
+When available, OddsPortal rows are preferred over football-data odds.
 
 ## 5. User flow in web app
 
@@ -93,3 +111,20 @@ curl http://localhost:8000/api/v1/leaderboard/global
 ```
 
 If matches are empty, run the provider pipeline endpoint again.
+
+** No positive value edge against model probabilities.
+└ That message means there is no value bet for that match under the current model and odds.
+
+  Specifically, for each 1/X/2 outcome, the app computes expected value: EV = model_probability * bookmaker_odds - 1.
+  If all EV values are <= 0, it shows: "No positive value edge against model probabilities."
+
+  So the bookmaker prices are not offering a mathematically positive edge versus the model for that fixture.
+
+
+  └ EV and edge are now clearly defined for your bookmaker opportunity output:
+
+   - EV (Expected Value) uses EV = p_model
+    * odds - 1 and estimates long-run return per 1 unit stake.
+   - Edge uses Edge = p_model - (1/odds) and measures how much your model probability exceeds bookmaker implied probability.
+
+  For your sample (X, odds 24.00): implied probability is 4.17%; if model is ~25.6%, then edge is +21.4% and EV is +514.8%.

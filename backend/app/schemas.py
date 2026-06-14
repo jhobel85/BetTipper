@@ -22,8 +22,24 @@ class MatchPrediction(BaseModel):
     reason: str
 
 
+class BookmakerTipOut(BaseModel):
+    recommended_outcome: str
+    confidence_score: float
+    odds_home: float
+    odds_draw: float
+    odds_away: float
+    implied_home: float
+    implied_draw: float
+    implied_away: float
+    source: str
+    best_value_outcome: Optional[str] = None
+    best_value_edge_pct: Optional[float] = None
+    best_value_ev_pct: Optional[float] = None
+
+
 class MatchWithPrediction(MatchBase):
     prediction: MatchPrediction
+    bookmaker_tip: Optional[BookmakerTipOut] = None
 
 
 class TipCreate(BaseModel):

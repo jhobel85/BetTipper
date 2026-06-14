@@ -1,22 +1,24 @@
 import json
+import re
 from pathlib import Path
 from typing import Any
 
 import requests
 from sqlalchemy.orm import Session
 
-from ..data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions
+from ..data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions, update_bookmaker_tips
 from .data_merger import merge_all
 from .fbref import get_fbref_stats
 from .football_data import RAW_OUTPUT, get_team_recent_matches, save_wc_matches_raw
 from .injuries import get_injuries
-from .odds import get_odds
+from .odds import get_odds, get_oddsportal_file_info
 from .understat import get_understat
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 TEAMS_PATH = DATA_DIR / "teams_ms2026.json"
 MATCHES_PATH = DATA_DIR / "matches_ms2026.json"
 ELO_TSV_URL = "https://www.eloratings.net/World.tsv"
+FOUR_DP_PATTERN = re.compile(r"^-?\d+\.\d{4}$")
 FIFA_TO_ELO_CODE = {
     "ALG": "DZ",
     "ARG": "AR",
@@ -93,6 +95,8 @@ def _load_elo_ratings() -> dict[str, float]:
 
 
 def _extract_teams_from_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    def _fmt4(value: float) -> str:
+        return f"{value:.4f}"
     # Build basic team performance stats from already finished matches.
     perf: dict[str, dict[str, float]] = {}
     for m in matches:
@@ -194,12 +198,43 @@ def _extract_teams_from_matches(matches: list[dict[str, Any]]) -> list[dict[str,
                 "name": name,
                 "fifa_code": code,
                 "group": (m.get("group") or "").replace("GROUP_", "") or None,
-                "rating_attack": round(rating_attack, 4),
-                "rating_defense": round(rating_defense, 4),
-                "rating_overall": round(rating_overall, 4),
+                "rating_attack": _fmt4(rating_attack),
+                "rating_defense": _fmt4(rating_defense),
+                "rating_overall": _fmt4(rating_overall),
             }
 
     return list(by_code.values())
+
+
+def normalize_teams_rating_precision(path: Path = TEAMS_PATH) -> dict[str, int]:
+    if not path.exists():
+        return {"normalized": 0, "skipped": 0}
+
+    with path.open("r", encoding="utf-8") as f:
+        rows = json.load(f)
+
+    normalized = 0
+    skipped = 0
+    rating_fields = ("rating_attack", "rating_defense", "rating_overall")
+
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        for field in rating_fields:
+            value = row.get(field)
+            if isinstance(value, str) and FOUR_DP_PATTERN.match(value):
+                skipped += 1
+                continue
+            try:
+                row[field] = f"{float(value):.4f}"
+                normalized += 1
+            except (TypeError, ValueError):
+                continue
+
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2, ensure_ascii=False)
+
+    return {"normalized": normalized, "skipped": skipped}
 
 
 def _to_matches_json(merged_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -245,6 +280,11 @@ def run_pipeline(db: Session, season: int = 2026) -> dict[str, Any]:
     fbref = get_fbref_stats(matches)
     understat = get_understat(matches)
     odds = get_odds(matches)
+    oddsportal_file = get_oddsportal_file_info()
+    odds_source_counts: dict[str, int] = {}
+    for value in odds.values():
+        src = str(value.get("source", "unknown"))
+        odds_source_counts[src] = odds_source_counts.get(src, 0) + 1
     injuries = get_injuries(matches)
 
     merged = merge_all(matches, fbref, understat, odds, injuries)
@@ -254,12 +294,14 @@ def run_pipeline(db: Session, season: int = 2026) -> dict[str, Any]:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with TEAMS_PATH.open("w", encoding="utf-8") as f:
         json.dump(teams_json, f, indent=2, ensure_ascii=False)
+    precision_result = normalize_teams_rating_precision(TEAMS_PATH)
     with MATCHES_PATH.open("w", encoding="utf-8") as f:
         json.dump(matches_json, f, indent=2, ensure_ascii=False)
 
     teams_result = load_teams_from_json(db, path=TEAMS_PATH)
     matches_result = load_matches_from_json(db, path=MATCHES_PATH)
     prediction_result = recompute_predictions(db)
+    bookmaker_result = update_bookmaker_tips(db, merged, odds, source="football-data", allow_model_fallback=True)
 
     return {
         "season": season,
@@ -268,15 +310,53 @@ def run_pipeline(db: Session, season: int = 2026) -> dict[str, Any]:
         "merged_rows": len(merged),
         "teams_file_count": len(teams_json),
         "matches_file_count": len(matches_json),
+        "teams_rating_precision": precision_result,
         "providers": {
             "fbref_records": len(fbref),
             "understat_records": len(understat),
             "odds_records": len(odds),
+            "odds_sources": odds_source_counts,
+            "oddsportal_file": oddsportal_file,
             "injury_records": len(injuries),
         },
         "db": {
             "teams": teams_result,
             "matches": matches_result,
+            "bookmaker_tips": bookmaker_result,
             "predictions": prediction_result,
         },
+    }
+
+
+def refresh_bookmaker_tips_only(db: Session, season: int = 2026) -> dict[str, Any]:
+    source = "remote"
+    try:
+        raw_payload = save_wc_matches_raw(path=RAW_OUTPUT, season=season)
+    except Exception:
+        if not RAW_OUTPUT.exists():
+            raise RuntimeError(
+                "Could not fetch football-data.org matches and no local fallback file exists at "
+                f"{RAW_OUTPUT}. Provide FOOTBALL_DATA_API_KEY or create fifa_matches_raw.json."
+            )
+        with RAW_OUTPUT.open("r", encoding="utf-8") as f:
+            raw_payload = json.load(f)
+        source = "local_fallback"
+
+    matches = raw_payload.get("matches", [])
+    odds = get_odds(matches)
+    oddsportal_file = get_oddsportal_file_info()
+    odds_source_counts: dict[str, int] = {}
+    for value in odds.values():
+        src = str(value.get("source", "unknown"))
+        odds_source_counts[src] = odds_source_counts.get(src, 0) + 1
+    merged = merge_all(matches, {}, {}, odds, {})
+    bookmaker_result = update_bookmaker_tips(db, merged, odds, source="football-data")
+    return {
+        "season": season,
+        "source": source,
+        "raw_matches": len(matches),
+        "odds_records": len(odds),
+        "odds_sources": odds_source_counts,
+        "oddsportal_file": oddsportal_file,
+        "bookmaker_tips": bookmaker_result,
     }

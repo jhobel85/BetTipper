@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from ..db import get_db
 from .. import models, schemas
 from ..data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions
-from ..data_providers.data_pipeline import run_pipeline
+from ..data_providers.data_pipeline import refresh_bookmaker_tips_only, run_pipeline
 from ..match_generator import DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH, generate_matches_from_fifa_api
 
 router = APIRouter(tags=["admin"])
@@ -97,3 +97,12 @@ def admin_run_provider_pipeline(db: Session = Depends(get_db)):
     except RuntimeError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     return {"status": "ok", "pipeline": result}
+
+
+@router.post("/admin/update-bookmaker-tips")
+def admin_update_bookmaker_tips(db: Session = Depends(get_db)):
+    try:
+        result = refresh_bookmaker_tips_only(db, season=2026)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return {"status": "ok", "bookmaker": result}

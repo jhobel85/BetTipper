@@ -6,6 +6,35 @@ from .. import models, schemas
 router = APIRouter(tags=["matches"])
 
 
+def _value_opportunity(
+    prob_home: float,
+    prob_draw: float,
+    prob_away: float,
+    odds_home: float,
+    odds_draw: float,
+    odds_away: float,
+) -> tuple[str | None, float | None, float | None]:
+    candidates = {
+        "1": (prob_home, odds_home),
+        "X": (prob_draw, odds_draw),
+        "2": (prob_away, odds_away),
+    }
+    best_outcome: str | None = None
+    best_edge_pct: float | None = None
+    best_ev_pct: float | None = None
+    for outcome, (model_prob, odds) in candidates.items():
+        implied_prob = 1.0 / odds if odds > 0 else 0.0
+        edge = model_prob - implied_prob
+        ev = (model_prob * odds) - 1.0
+        if best_ev_pct is None or ev > best_ev_pct:
+            best_outcome = outcome
+            best_edge_pct = edge * 100.0
+            best_ev_pct = ev * 100.0
+    if best_ev_pct is None or best_ev_pct <= 0:
+        return None, None, None
+    return best_outcome, best_edge_pct, best_ev_pct
+
+
 def _prediction_reason(
     home_name: str,
     away_name: str,
@@ -62,6 +91,23 @@ def list_matches(db: Session = Depends(get_db)):
         pred = db.query(models.ModelPrediction).filter(models.ModelPrediction.match_id == m.id).first()
         if not pred:
             continue
+        bookmaker = db.query(models.BookmakerTip).filter(models.BookmakerTip.match_id == m.id).first()
+        best_value_outcome: str | None = None
+        best_value_edge_pct: float | None = None
+        best_value_ev_pct: float | None = None
+        if bookmaker:
+            (
+                best_value_outcome,
+                best_value_edge_pct,
+                best_value_ev_pct,
+            ) = _value_opportunity(
+                prob_home=pred.prob_home_win,
+                prob_draw=pred.prob_draw,
+                prob_away=pred.prob_away_win,
+                odds_home=bookmaker.odds_home,
+                odds_draw=bookmaker.odds_draw,
+                odds_away=bookmaker.odds_away,
+            )
         reason = _prediction_reason(
             home_name=m.home_team.name,
             away_name=m.away_team.name,
@@ -92,6 +138,24 @@ def list_matches(db: Session = Depends(get_db)):
                 recommended_outcome=pred.recommended_outcome,
                 confidence_score=pred.confidence_score,
                 reason=reason,
+            ),
+            bookmaker_tip=(
+                schemas.BookmakerTipOut(
+                    recommended_outcome=bookmaker.recommended_outcome,
+                    confidence_score=bookmaker.confidence_score,
+                    odds_home=bookmaker.odds_home,
+                    odds_draw=bookmaker.odds_draw,
+                    odds_away=bookmaker.odds_away,
+                    implied_home=bookmaker.implied_home,
+                    implied_draw=bookmaker.implied_draw,
+                    implied_away=bookmaker.implied_away,
+                    source=bookmaker.source,
+                    best_value_outcome=best_value_outcome,
+                    best_value_edge_pct=best_value_edge_pct,
+                    best_value_ev_pct=best_value_ev_pct,
+                )
+                if bookmaker
+                else None
             ),
         )
         result.append(item)

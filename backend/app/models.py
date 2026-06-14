@@ -83,3 +83,21 @@ class TipScore(Base):
     total_points = Column(Integer, default=0)
 
     tip = relationship("Tip")
+
+
+class BookmakerTip(Base):
+    __tablename__ = "bookmaker_tips"
+    id = Column(Integer, primary_key=True, index=True)
+    match_id = Column(Integer, ForeignKey("matches.id"), unique=True, nullable=False)
+    odds_home = Column(Float, nullable=False)
+    odds_draw = Column(Float, nullable=False)
+    odds_away = Column(Float, nullable=False)
+    implied_home = Column(Float, nullable=False)
+    implied_draw = Column(Float, nullable=False)
+    implied_away = Column(Float, nullable=False)
+    recommended_outcome = Column(String, nullable=False)
+    confidence_score = Column(Float, nullable=False)
+    source = Column(String, nullable=False, default="football-data")
+    updated_at = Column(DateTime, default=datetime.utcnow)
+
+    match = relationship("Match")

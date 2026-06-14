@@ -3,384 +3,384 @@
     "name": "Mexico",
     "fifa_code": "MEX",
     "group": "A",
-    "rating_attack": 1.28,
-    "rating_defense": 1.42,
-    "rating_overall": 2.7
+    "rating_attack": "1.2800",
+    "rating_defense": "1.4200",
+    "rating_overall": "2.7000"
   },
   {
     "name": "South Africa",
     "fifa_code": "RSA",
     "group": "A",
-    "rating_attack": 0.6,
-    "rating_defense": 0.72,
-    "rating_overall": 1.32
+    "rating_attack": "0.6000",
+    "rating_defense": "0.7200",
+    "rating_overall": "1.3200"
   },
   {
     "name": "South Korea",
     "fifa_code": "KOR",
     "group": "A",
-    "rating_attack": 1.28,
-    "rating_defense": 1.07,
-    "rating_overall": 2.35
+    "rating_attack": "1.2800",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.3500"
   },
   {
     "name": "Czechia",
     "fifa_code": "CZE",
     "group": "A",
-    "rating_attack": 0.93,
-    "rating_defense": 0.72,
-    "rating_overall": 1.65
+    "rating_attack": "0.9300",
+    "rating_defense": "0.7200",
+    "rating_overall": "1.6500"
   },
   {
     "name": "Canada",
     "fifa_code": "CAN",
     "group": "B",
-    "rating_attack": 1.0837,
-    "rating_defense": 1.0744,
-    "rating_overall": 2.1582
+    "rating_attack": "1.0837",
+    "rating_defense": "1.0744",
+    "rating_overall": "2.1582"
   },
   {
     "name": "Bosnia-Herzegovina",
     "fifa_code": "BIH",
     "group": "B",
-    "rating_attack": 0.895,
-    "rating_defense": 0.9067,
-    "rating_overall": 1.8017
+    "rating_attack": "0.8950",
+    "rating_defense": "0.9067",
+    "rating_overall": "1.8017"
   },
   {
     "name": "United States",
     "fifa_code": "USA",
     "group": "D",
-    "rating_attack": 1.8,
-    "rating_defense": 1.07,
-    "rating_overall": 2.87
+    "rating_attack": "1.8000",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.8700"
   },
   {
     "name": "Paraguay",
     "fifa_code": "PAR",
     "group": "D",
-    "rating_attack": 0.93,
-    "rating_defense": 0.6,
-    "rating_overall": 1.53
+    "rating_attack": "0.9300",
+    "rating_defense": "0.6000",
+    "rating_overall": "1.5300"
   },
   {
     "name": "Qatar",
     "fifa_code": "QAT",
     "group": "B",
-    "rating_attack": 0.93,
-    "rating_defense": 1.07,
-    "rating_overall": 2.0
+    "rating_attack": "0.9300",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.0000"
   },
   {
     "name": "Switzerland",
     "fifa_code": "SUI",
     "group": "B",
-    "rating_attack": 0.93,
-    "rating_defense": 1.07,
-    "rating_overall": 2.0
+    "rating_attack": "0.9300",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.0000"
   },
   {
     "name": "Brazil",
     "fifa_code": "BRA",
     "group": "C",
-    "rating_attack": 0.93,
-    "rating_defense": 1.07,
-    "rating_overall": 2.0
+    "rating_attack": "0.9300",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.0000"
   },
   {
     "name": "Morocco",
     "fifa_code": "MAR",
     "group": "C",
-    "rating_attack": 0.93,
-    "rating_defense": 1.07,
-    "rating_overall": 2.0
+    "rating_attack": "0.9300",
+    "rating_defense": "1.0700",
+    "rating_overall": "2.0000"
   },
   {
     "name": "Haiti",
     "fifa_code": "HAI",
     "group": "C",
-    "rating_attack": 0.6,
-    "rating_defense": 1.07,
-    "rating_overall": 1.67
+    "rating_attack": "0.6000",
+    "rating_defense": "1.0700",
+    "rating_overall": "1.6700"
   },
   {
     "name": "Scotland",
     "fifa_code": "SCO",
     "group": "C",
-    "rating_attack": 0.93,
-    "rating_defense": 1.42,
-    "rating_overall": 2.35
+    "rating_attack": "0.9300",
+    "rating_defense": "1.4200",
+    "rating_overall": "2.3500"
   },
   {
     "name": "Australia",
     "fifa_code": "AUS",
     "group": "D",
-    "rating_attack": 1.28,
-    "rating_defense": 1.42,
-    "rating_overall": 2.7
+    "rating_attack": "1.2800",
+    "rating_defense": "1.4200",
+    "rating_overall": "2.7000"
   },
   {
     "name": "Turkey",
     "fifa_code": "TUR",
     "group": "D",
-    "rating_attack": 0.6,
-    "rating_defense": 0.72,
-    "rating_overall": 1.32
+    "rating_attack": "0.6000",
+    "rating_defense": "0.7200",
+    "rating_overall": "1.3200"
   },
   {
     "name": "Germany",
     "fifa_code": "GER",
     "group": "E",
-    "rating_attack": 1.29,
-    "rating_defense": 1.2578,
-    "rating_overall": 2.5478
+    "rating_attack": "1.2900",
+    "rating_defense": "1.2578",
+    "rating_overall": "2.5478"
   },
   {
     "name": "Curaçao",
     "fifa_code": "CUW",
     "group": "E",
-    "rating_attack": 0.6675,
-    "rating_defense": 0.7044,
-    "rating_overall": 1.3719
+    "rating_attack": "0.6675",
+    "rating_defense": "0.7044",
+    "rating_overall": "1.3719"
   },
   {
     "name": "Netherlands",
     "fifa_code": "NED",
     "group": "F",
-    "rating_attack": 1.31,
-    "rating_defense": 1.2756,
-    "rating_overall": 2.5856
+    "rating_attack": "1.3100",
+    "rating_defense": "1.2756",
+    "rating_overall": "2.5856"
   },
   {
     "name": "Japan",
     "fifa_code": "JPN",
     "group": "F",
-    "rating_attack": 1.2575,
-    "rating_defense": 1.2289,
-    "rating_overall": 2.4864
+    "rating_attack": "1.2575",
+    "rating_defense": "1.2289",
+    "rating_overall": "2.4864"
   },
   {
     "name": "Ivory Coast",
     "fifa_code": "CIV",
     "group": "E",
-    "rating_attack": 0.9938,
-    "rating_defense": 0.9944,
-    "rating_overall": 1.9882
+    "rating_attack": "0.9938",
+    "rating_defense": "0.9944",
+    "rating_overall": "1.9882"
   },
   {
     "name": "Ecuador",
     "fifa_code": "ECU",
     "group": "E",
-    "rating_attack": 1.2975,
-    "rating_defense": 1.2644,
-    "rating_overall": 2.5619
+    "rating_attack": "1.2975",
+    "rating_defense": "1.2644",
+    "rating_overall": "2.5619"
   },
   {
     "name": "Sweden",
     "fifa_code": "SWE",
     "group": "F",
-    "rating_attack": 1.015,
-    "rating_defense": 1.0133,
-    "rating_overall": 2.0283
+    "rating_attack": "1.0150",
+    "rating_defense": "1.0133",
+    "rating_overall": "2.0283"
   },
   {
     "name": "Tunisia",
     "fifa_code": "TUN",
     "group": "F",
-    "rating_attack": 0.91,
-    "rating_defense": 0.92,
-    "rating_overall": 1.83
+    "rating_attack": "0.9100",
+    "rating_defense": "0.9200",
+    "rating_overall": "1.8300"
   },
   {
     "name": "Spain",
     "fifa_code": "ESP",
     "group": "H",
-    "rating_attack": 1.5713,
-    "rating_defense": 1.5078,
-    "rating_overall": 3.079
+    "rating_attack": "1.5713",
+    "rating_defense": "1.5078",
+    "rating_overall": "3.0790"
   },
   {
     "name": "Cape Verde Islands",
     "fifa_code": "CPV",
     "group": "H",
-    "rating_attack": 0.8475,
-    "rating_defense": 0.8644,
-    "rating_overall": 1.7119
+    "rating_attack": "0.8475",
+    "rating_defense": "0.8644",
+    "rating_overall": "1.7119"
   },
   {
     "name": "Belgium",
     "fifa_code": "BEL",
     "group": "G",
-    "rating_attack": 1.2425,
-    "rating_defense": 1.2156,
-    "rating_overall": 2.4581
+    "rating_attack": "1.2425",
+    "rating_defense": "1.2156",
+    "rating_overall": "2.4581"
   },
   {
     "name": "Egypt",
     "fifa_code": "EGY",
     "group": "G",
-    "rating_attack": 0.995,
-    "rating_defense": 0.9956,
-    "rating_overall": 1.9906
+    "rating_attack": "0.9950",
+    "rating_defense": "0.9956",
+    "rating_overall": "1.9906"
   },
   {
     "name": "Saudi Arabia",
     "fifa_code": "KSA",
     "group": "H",
-    "rating_attack": 0.845,
-    "rating_defense": 0.8622,
-    "rating_overall": 1.7072
+    "rating_attack": "0.8450",
+    "rating_defense": "0.8622",
+    "rating_overall": "1.7072"
   },
   {
     "name": "Uruguay",
     "fifa_code": "URY",
     "group": "H",
-    "rating_attack": 1.24,
-    "rating_defense": 1.2133,
-    "rating_overall": 2.4533
+    "rating_attack": "1.2400",
+    "rating_defense": "1.2133",
+    "rating_overall": "2.4533"
   },
   {
     "name": "Iran",
     "fifa_code": "IRN",
     "group": "G",
-    "rating_attack": 1.09,
-    "rating_defense": 1.08,
-    "rating_overall": 2.17
+    "rating_attack": "1.0900",
+    "rating_defense": "1.0800",
+    "rating_overall": "2.1700"
   },
   {
     "name": "New Zealand",
     "fifa_code": "NZL",
     "group": "G",
-    "rating_attack": 0.8275,
-    "rating_defense": 0.8467,
-    "rating_overall": 1.6742
+    "rating_attack": "0.8275",
+    "rating_defense": "0.8467",
+    "rating_overall": "1.6742"
   },
   {
     "name": "France",
     "fifa_code": "FRA",
     "group": "I",
-    "rating_attack": 1.4537,
-    "rating_defense": 1.4033,
-    "rating_overall": 2.8571
+    "rating_attack": "1.4537",
+    "rating_defense": "1.4033",
+    "rating_overall": "2.8571"
   },
   {
     "name": "Senegal",
     "fifa_code": "SEN",
     "group": "I",
-    "rating_attack": 1.2,
-    "rating_defense": 1.1778,
-    "rating_overall": 2.3778
+    "rating_attack": "1.2000",
+    "rating_defense": "1.1778",
+    "rating_overall": "2.3778"
   },
   {
     "name": "Iraq",
     "fifa_code": "IRQ",
     "group": "I",
-    "rating_attack": 0.8838,
-    "rating_defense": 0.8967,
-    "rating_overall": 1.7804
+    "rating_attack": "0.8838",
+    "rating_defense": "0.8967",
+    "rating_overall": "1.7804"
   },
   {
     "name": "Norway",
     "fifa_code": "NOR",
     "group": "I",
-    "rating_attack": 1.2675,
-    "rating_defense": 1.2378,
-    "rating_overall": 2.5053
+    "rating_attack": "1.2675",
+    "rating_defense": "1.2378",
+    "rating_overall": "2.5053"
   },
   {
     "name": "Argentina",
     "fifa_code": "ARG",
     "group": "J",
-    "rating_attack": 1.5188,
-    "rating_defense": 1.4611,
-    "rating_overall": 2.9799
+    "rating_attack": "1.5188",
+    "rating_defense": "1.4611",
+    "rating_overall": "2.9799"
   },
   {
     "name": "Algeria",
     "fifa_code": "ALG",
     "group": "J",
-    "rating_attack": 1.09,
-    "rating_defense": 1.08,
-    "rating_overall": 2.17
+    "rating_attack": "1.0900",
+    "rating_defense": "1.0800",
+    "rating_overall": "2.1700"
   },
   {
     "name": "Austria",
     "fifa_code": "AUT",
     "group": "J",
-    "rating_attack": 1.1625,
-    "rating_defense": 1.1444,
-    "rating_overall": 2.3069
+    "rating_attack": "1.1625",
+    "rating_defense": "1.1444",
+    "rating_overall": "2.3069"
   },
   {
     "name": "Jordan",
     "fifa_code": "JOR",
     "group": "J",
-    "rating_attack": 0.975,
-    "rating_defense": 0.9778,
-    "rating_overall": 1.9528
+    "rating_attack": "0.9750",
+    "rating_defense": "0.9778",
+    "rating_overall": "1.9528"
   },
   {
     "name": "Portugal",
     "fifa_code": "POR",
     "group": "K",
-    "rating_attack": 1.3613,
-    "rating_defense": 1.3211,
-    "rating_overall": 2.6824
+    "rating_attack": "1.3613",
+    "rating_defense": "1.3211",
+    "rating_overall": "2.6824"
   },
   {
     "name": "Congo DR",
     "fifa_code": "COD",
     "group": "K",
-    "rating_attack": 0.94,
-    "rating_defense": 0.9467,
-    "rating_overall": 1.8867
+    "rating_attack": "0.9400",
+    "rating_defense": "0.9467",
+    "rating_overall": "1.8867"
   },
   {
     "name": "England",
     "fifa_code": "ENG",
     "group": "L",
-    "rating_attack": 1.405,
-    "rating_defense": 1.36,
-    "rating_overall": 2.765
+    "rating_attack": "1.4050",
+    "rating_defense": "1.3600",
+    "rating_overall": "2.7650"
   },
   {
     "name": "Croatia",
     "fifa_code": "CRO",
     "group": "L",
-    "rating_attack": 1.265,
-    "rating_defense": 1.2356,
-    "rating_overall": 2.5006
+    "rating_attack": "1.2650",
+    "rating_defense": "1.2356",
+    "rating_overall": "2.5006"
   },
   {
     "name": "Ghana",
     "fifa_code": "GHA",
     "group": "L",
-    "rating_attack": 0.7625,
-    "rating_defense": 0.7889,
-    "rating_overall": 1.5514
+    "rating_attack": "0.7625",
+    "rating_defense": "0.7889",
+    "rating_overall": "1.5514"
   },
   {
     "name": "Panama",
     "fifa_code": "PAN",
     "group": "L",
-    "rating_attack": 1.0375,
-    "rating_defense": 1.0333,
-    "rating_overall": 2.0708
+    "rating_attack": "1.0375",
+    "rating_defense": "1.0333",
+    "rating_overall": "2.0708"
   },
   {
     "name": "Uzbekistan",
     "fifa_code": "UZB",
     "group": "K",
-    "rating_attack": 1.0175,
-    "rating_defense": 1.0156,
-    "rating_overall": 2.0331
+    "rating_attack": "1.0175",
+    "rating_defense": "1.0156",
+    "rating_overall": "2.0331"
   },
   {
     "name": "Colombia",
     "fifa_code": "COL",
     "group": "K",
-    "rating_attack": 1.3525,
-    "rating_defense": 1.3133,
-    "rating_overall": 2.6658
+    "rating_attack": "1.3525",
+    "rating_defense": "1.3133",
+    "rating_overall": "2.6658"
   }
 ]

@@ -7,6 +7,21 @@ export type MatchPrediction = {
   reason: string;
 };
 
+export type BookmakerTip = {
+  recommended_outcome: string;
+  confidence_score: number;
+  odds_home: number;
+  odds_draw: number;
+  odds_away: number;
+  implied_home: number;
+  implied_draw: number;
+  implied_away: number;
+  source: string;
+  best_value_outcome?: string | null;
+  best_value_edge_pct?: number | null;
+  best_value_ev_pct?: number | null;
+};
+
 export type Match = {
   id: number;
   home_team_name: string;
@@ -16,6 +31,7 @@ export type Match = {
   group?: string;
   status: string;
   prediction: MatchPrediction;
+  bookmaker_tip?: BookmakerTip | null;
 };
 
 export type LeaderboardEntry = {
