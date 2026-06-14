@@ -1,0 +1,386 @@
+[
+  {
+    "name": "Mexico",
+    "fifa_code": "MEX",
+    "group": "A",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "South Africa",
+    "fifa_code": "RSA",
+    "group": "A",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "South Korea",
+    "fifa_code": "KOR",
+    "group": "A",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Czechia",
+    "fifa_code": "CZE",
+    "group": "A",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Canada",
+    "fifa_code": "CAN",
+    "group": "B",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Bosnia-Herzegovina",
+    "fifa_code": "BIH",
+    "group": "B",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "United States",
+    "fifa_code": "USA",
+    "group": "D",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Paraguay",
+    "fifa_code": "PAR",
+    "group": "D",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Qatar",
+    "fifa_code": "QAT",
+    "group": "B",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Switzerland",
+    "fifa_code": "SUI",
+    "group": "B",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Brazil",
+    "fifa_code": "BRA",
+    "group": "C",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Morocco",
+    "fifa_code": "MAR",
+    "group": "C",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Haiti",
+    "fifa_code": "HAI",
+    "group": "C",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Scotland",
+    "fifa_code": "SCO",
+    "group": "C",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Australia",
+    "fifa_code": "AUS",
+    "group": "D",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Turkey",
+    "fifa_code": "TUR",
+    "group": "D",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Germany",
+    "fifa_code": "GER",
+    "group": "E",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Curaçao",
+    "fifa_code": "CUW",
+    "group": "E",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Netherlands",
+    "fifa_code": "NED",
+    "group": "F",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Japan",
+    "fifa_code": "JPN",
+    "group": "F",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Ivory Coast",
+    "fifa_code": "CIV",
+    "group": "E",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Ecuador",
+    "fifa_code": "ECU",
+    "group": "E",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Sweden",
+    "fifa_code": "SWE",
+    "group": "F",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Tunisia",
+    "fifa_code": "TUN",
+    "group": "F",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Spain",
+    "fifa_code": "ESP",
+    "group": "H",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Cape Verde Islands",
+    "fifa_code": "CPV",
+    "group": "H",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Belgium",
+    "fifa_code": "BEL",
+    "group": "G",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Egypt",
+    "fifa_code": "EGY",
+    "group": "G",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Saudi Arabia",
+    "fifa_code": "KSA",
+    "group": "H",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Uruguay",
+    "fifa_code": "URY",
+    "group": "H",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Iran",
+    "fifa_code": "IRN",
+    "group": "G",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "New Zealand",
+    "fifa_code": "NZL",
+    "group": "G",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "France",
+    "fifa_code": "FRA",
+    "group": "I",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Senegal",
+    "fifa_code": "SEN",
+    "group": "I",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Iraq",
+    "fifa_code": "IRQ",
+    "group": "I",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Norway",
+    "fifa_code": "NOR",
+    "group": "I",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Argentina",
+    "fifa_code": "ARG",
+    "group": "J",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Algeria",
+    "fifa_code": "ALG",
+    "group": "J",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Austria",
+    "fifa_code": "AUT",
+    "group": "J",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Jordan",
+    "fifa_code": "JOR",
+    "group": "J",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Portugal",
+    "fifa_code": "POR",
+    "group": "K",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Congo DR",
+    "fifa_code": "COD",
+    "group": "K",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "England",
+    "fifa_code": "ENG",
+    "group": "L",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Croatia",
+    "fifa_code": "CRO",
+    "group": "L",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Ghana",
+    "fifa_code": "GHA",
+    "group": "L",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Panama",
+    "fifa_code": "PAN",
+    "group": "L",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Uzbekistan",
+    "fifa_code": "UZB",
+    "group": "K",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  },
+  {
+    "name": "Colombia",
+    "fifa_code": "COL",
+    "group": "K",
+    "rating_attack": 1.0,
+    "rating_defense": 1.0,
+    "rating_overall": 2.0
+  }
+]

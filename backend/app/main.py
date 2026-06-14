@@ -1,5 +1,9 @@
+import os
+
 from fastapi import FastAPI
+from .data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions
 from .db import Base, engine, SessionLocal
+from .match_generator import DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH, generate_matches_from_fifa_api
 from .sample_data import init_sample_data
 from .routers import admin, auth, matches, tips, leaderboard
 
@@ -14,4 +18,13 @@ app.include_router(leaderboard.router, prefix="/api/v1")
 app.include_router(admin.router, prefix="/api/v1")
 
 with SessionLocal() as db:
-    init_sample_data(db)
+    if os.getenv("BT_AUTO_LOAD_REAL_DATA", "").lower() in {"1", "true", "yes"}:
+        load_teams_from_json(db)
+        if DEFAULT_FIFA_RAW_PATH.exists():
+            generate_matches_from_fifa_api(DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH)
+        load_matches_from_json(db)
+        recompute_predictions(db)
+
+if os.getenv("BT_ENABLE_SAMPLE_SEED", "").lower() in {"1", "true", "yes"}:
+    with SessionLocal() as db:
+        init_sample_data(db)

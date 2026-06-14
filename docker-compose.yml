@@ -4,6 +4,9 @@ services:
   backend:
     build: ./backend
     container_name: ms2026-backend
+    environment:
+      - BT_AUTO_LOAD_REAL_DATA=true
+      - BT_ENABLE_SAMPLE_SEED=false
     ports:
       - "8000:8000"
     volumes:

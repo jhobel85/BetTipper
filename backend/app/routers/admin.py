@@ -2,6 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from ..db import get_db
 from .. import models, schemas
+from ..data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions
+from ..data_providers.data_pipeline import run_pipeline
+from ..match_generator import DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH, generate_matches_from_fifa_api
 
 router = APIRouter(tags=["admin"])
 
@@ -52,3 +55,45 @@ def enter_match_result(match_id: int, result_in: schemas.MatchResult, db: Sessio
 
     db.commit()
     return {"status": "ok", "tips_scored": len(tips)}
+
+@router.post("/admin/load-teams")
+def admin_load_teams(db: Session = Depends(get_db)):
+    result = load_teams_from_json(db)
+    return {"status": "ok", "teams": result}
+
+
+@router.post("/admin/load-matches")
+def admin_load_matches(db: Session = Depends(get_db)):
+    generated = 0
+    if DEFAULT_FIFA_RAW_PATH.exists():
+        generated = generate_matches_from_fifa_api(DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH)
+
+    result = load_matches_from_json(db)
+    return {"status": "ok", "generated_matches": generated, "matches": result}
+
+
+@router.post("/admin/generate-matches")
+def admin_generate_matches():
+    if not DEFAULT_FIFA_RAW_PATH.exists():
+        raise HTTPException(
+            status_code=400,
+            detail=f"Missing raw FIFA source file: {DEFAULT_FIFA_RAW_PATH}",
+        )
+
+    generated = generate_matches_from_fifa_api(DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH)
+    return {"status": "ok", "generated_matches": generated, "output_file": str(DEFAULT_OUTPUT_PATH)}
+
+
+@router.post("/admin/recompute-predictions")
+def admin_recompute_predictions(db: Session = Depends(get_db)):
+    result = recompute_predictions(db)
+    return {"status": "ok", "predictions": result}
+
+
+@router.post("/admin/run-provider-pipeline")
+def admin_run_provider_pipeline(db: Session = Depends(get_db)):
+    try:
+        result = run_pipeline(db, season=2026)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return {"status": "ok", "pipeline": result}

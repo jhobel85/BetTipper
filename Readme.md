@@ -1,5 +1,9 @@
 \# MS 2026 Tipper – Complete Sample App
 
+\## Usage guide
+
+See `docs/APP_USAGE_GUIDE.md` for full setup, real-data loading, and app usage.
+
 \## Run With Docker
 
 docker-compose down -v
@@ -23,7 +27,6 @@ uvicorn app.main:app --reload
 cd frontend
 npm install
 npm run dev
-
 
 
 
