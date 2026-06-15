@@ -131,65 +131,65 @@
     "name": "Germany",
     "fifa_code": "GER",
     "group": "E",
-    "rating_attack": "1.2900",
-    "rating_defense": "1.2578",
-    "rating_overall": "2.5478"
+    "rating_attack": "1.2988",
+    "rating_defense": "1.2656",
+    "rating_overall": "2.5643"
   },
   {
     "name": "Curaçao",
     "fifa_code": "CUW",
     "group": "E",
-    "rating_attack": "0.6675",
-    "rating_defense": "0.7044",
-    "rating_overall": "1.3719"
+    "rating_attack": "0.6587",
+    "rating_defense": "0.6967",
+    "rating_overall": "1.3554"
   },
   {
     "name": "Netherlands",
     "fifa_code": "NED",
     "group": "F",
-    "rating_attack": "1.3100",
-    "rating_defense": "1.2756",
-    "rating_overall": "2.5856"
+    "rating_attack": "1.3050",
+    "rating_defense": "1.2711",
+    "rating_overall": "2.5761"
   },
   {
     "name": "Japan",
     "fifa_code": "JPN",
     "group": "F",
-    "rating_attack": "1.2575",
-    "rating_defense": "1.2289",
-    "rating_overall": "2.4864"
+    "rating_attack": "1.2625",
+    "rating_defense": "1.2333",
+    "rating_overall": "2.4958"
   },
   {
     "name": "Ivory Coast",
     "fifa_code": "CIV",
     "group": "E",
-    "rating_attack": "0.9938",
-    "rating_defense": "0.9944",
-    "rating_overall": "1.9882"
+    "rating_attack": "1.0537",
+    "rating_defense": "1.0478",
+    "rating_overall": "2.1015"
   },
   {
     "name": "Ecuador",
     "fifa_code": "ECU",
     "group": "E",
-    "rating_attack": "1.2975",
-    "rating_defense": "1.2644",
-    "rating_overall": "2.5619"
+    "rating_attack": "1.2375",
+    "rating_defense": "1.2111",
+    "rating_overall": "2.4486"
   },
   {
     "name": "Sweden",
     "fifa_code": "SWE",
     "group": "F",
-    "rating_attack": "1.0150",
-    "rating_defense": "1.0133",
-    "rating_overall": "2.0283"
+    "rating_attack": "1.0688",
+    "rating_defense": "1.0611",
+    "rating_overall": "2.1299"
   },
   {
     "name": "Tunisia",
     "fifa_code": "TUN",
     "group": "F",
-    "rating_attack": "0.9100",
-    "rating_defense": "0.9200",
-    "rating_overall": "1.8300"
+    "rating_attack": "0.8562",
+    "rating_defense": "0.8722",
+    "rating_overall": "1.7285"
   },
   {
     "name": "Spain",
