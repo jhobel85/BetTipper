@@ -1,0 +1,847 @@
+{
+  "simulations": 10000,
+  "group_qualification_probabilities": {
+    "A": [
+      {
+        "group": "A",
+        "team": "Mexico",
+        "fifa_code": "MEX",
+        "qualify_probability": 0.8014,
+        "first_place_probability": 0.5068
+      },
+      {
+        "group": "A",
+        "team": "South Korea",
+        "fifa_code": "KOR",
+        "qualify_probability": 0.6852,
+        "first_place_probability": 0.3294
+      },
+      {
+        "group": "A",
+        "team": "Czechia",
+        "fifa_code": "CZE",
+        "qualify_probability": 0.3399,
+        "first_place_probability": 0.1177
+      },
+      {
+        "group": "A",
+        "team": "South Africa",
+        "fifa_code": "RSA",
+        "qualify_probability": 0.1735,
+        "first_place_probability": 0.0461
+      }
+    ],
+    "B": [
+      {
+        "group": "B",
+        "team": "Canada",
+        "fifa_code": "CAN",
+        "qualify_probability": 0.6209,
+        "first_place_probability": 0.3461
+      },
+      {
+        "group": "B",
+        "team": "Switzerland",
+        "fifa_code": "SUI",
+        "qualify_probability": 0.4871,
+        "first_place_probability": 0.2399
+      },
+      {
+        "group": "B",
+        "team": "Qatar",
+        "fifa_code": "QAT",
+        "qualify_probability": 0.4751,
+        "first_place_probability": 0.2249
+      },
+      {
+        "group": "B",
+        "team": "Bosnia-Herzegovina",
+        "fifa_code": "BIH",
+        "qualify_probability": 0.4169,
+        "first_place_probability": 0.1891
+      }
+    ],
+    "D": [
+      {
+        "group": "D",
+        "team": "United States",
+        "fifa_code": "USA",
+        "qualify_probability": 0.886,
+        "first_place_probability": 0.5906
+      },
+      {
+        "group": "D",
+        "team": "Australia",
+        "fifa_code": "AUS",
+        "qualify_probability": 0.7691,
+        "first_place_probability": 0.3288
+      },
+      {
+        "group": "D",
+        "team": "Paraguay",
+        "fifa_code": "PAR",
+        "qualify_probability": 0.2191,
+        "first_place_probability": 0.0511
+      },
+      {
+        "group": "D",
+        "team": "Turkey",
+        "fifa_code": "TUR",
+        "qualify_probability": 0.1258,
+        "first_place_probability": 0.0295
+      }
+    ],
+    "C": [
+      {
+        "group": "C",
+        "team": "Scotland",
+        "fifa_code": "SCO",
+        "qualify_probability": 0.6355,
+        "first_place_probability": 0.3571
+      },
+      {
+        "group": "C",
+        "team": "Brazil",
+        "fifa_code": "BRA",
+        "qualify_probability": 0.5249,
+        "first_place_probability": 0.265
+      },
+      {
+        "group": "C",
+        "team": "Morocco",
+        "fifa_code": "MAR",
+        "qualify_probability": 0.5134,
+        "first_place_probability": 0.2454
+      },
+      {
+        "group": "C",
+        "team": "Haiti",
+        "fifa_code": "HAI",
+        "qualify_probability": 0.3262,
+        "first_place_probability": 0.1325
+      }
+    ],
+    "E": [
+      {
+        "group": "E",
+        "team": "Ecuador",
+        "fifa_code": "ECU",
+        "qualify_probability": 0.7044,
+        "first_place_probability": 0.3949
+      },
+      {
+        "group": "E",
+        "team": "Germany",
+        "fifa_code": "GER",
+        "qualify_probability": 0.6937,
+        "first_place_probability": 0.3796
+      },
+      {
+        "group": "E",
+        "team": "Ivory Coast",
+        "fifa_code": "CIV",
+        "qualify_probability": 0.4261,
+        "first_place_probability": 0.17
+      },
+      {
+        "group": "E",
+        "team": "Curaçao",
+        "fifa_code": "CUW",
+        "qualify_probability": 0.1758,
+        "first_place_probability": 0.0555
+      }
+    ],
+    "F": [
+      {
+        "group": "F",
+        "team": "Netherlands",
+        "fifa_code": "NED",
+        "qualify_probability": 0.669,
+        "first_place_probability": 0.3844
+      },
+      {
+        "group": "F",
+        "team": "Japan",
+        "fifa_code": "JPN",
+        "qualify_probability": 0.6313,
+        "first_place_probability": 0.3363
+      },
+      {
+        "group": "F",
+        "team": "Sweden",
+        "fifa_code": "SWE",
+        "qualify_probability": 0.3992,
+        "first_place_probability": 0.1631
+      },
+      {
+        "group": "F",
+        "team": "Tunisia",
+        "fifa_code": "TUN",
+        "qualify_probability": 0.3005,
+        "first_place_probability": 0.1162
+      }
+    ],
+    "H": [
+      {
+        "group": "H",
+        "team": "Spain",
+        "fifa_code": "ESP",
+        "qualify_probability": 0.8546,
+        "first_place_probability": 0.6009
+      },
+      {
+        "group": "H",
+        "team": "Uruguay",
+        "fifa_code": "URY",
+        "qualify_probability": 0.6297,
+        "first_place_probability": 0.2517
+      },
+      {
+        "group": "H",
+        "team": "Saudi Arabia",
+        "fifa_code": "KSA",
+        "qualify_probability": 0.2595,
+        "first_place_probability": 0.0698
+      },
+      {
+        "group": "H",
+        "team": "Cape Verde Islands",
+        "fifa_code": "CPV",
+        "qualify_probability": 0.2562,
+        "first_place_probability": 0.0776
+      }
+    ],
+    "G": [
+      {
+        "group": "G",
+        "team": "Belgium",
+        "fifa_code": "BEL",
+        "qualify_probability": 0.6844,
+        "first_place_probability": 0.415
+      },
+      {
+        "group": "G",
+        "team": "Iran",
+        "fifa_code": "IRN",
+        "qualify_probability": 0.5474,
+        "first_place_probability": 0.2625
+      },
+      {
+        "group": "G",
+        "team": "Egypt",
+        "fifa_code": "EGY",
+        "qualify_probability": 0.4702,
+        "first_place_probability": 0.2094
+      },
+      {
+        "group": "G",
+        "team": "New Zealand",
+        "fifa_code": "NZL",
+        "qualify_probability": 0.298,
+        "first_place_probability": 0.1131
+      }
+    ],
+    "I": [
+      {
+        "group": "I",
+        "team": "France",
+        "fifa_code": "FRA",
+        "qualify_probability": 0.7345,
+        "first_place_probability": 0.4534
+      },
+      {
+        "group": "I",
+        "team": "Norway",
+        "fifa_code": "NOR",
+        "qualify_probability": 0.5614,
+        "first_place_probability": 0.266
+      },
+      {
+        "group": "I",
+        "team": "Senegal",
+        "fifa_code": "SEN",
+        "qualify_probability": 0.4758,
+        "first_place_probability": 0.2033
+      },
+      {
+        "group": "I",
+        "team": "Iraq",
+        "fifa_code": "IRQ",
+        "qualify_probability": 0.2283,
+        "first_place_probability": 0.0773
+      }
+    ],
+    "J": [
+      {
+        "group": "J",
+        "team": "Argentina",
+        "fifa_code": "ARG",
+        "qualify_probability": 0.7824,
+        "first_place_probability": 0.5221
+      },
+      {
+        "group": "J",
+        "team": "Austria",
+        "fifa_code": "AUT",
+        "qualify_probability": 0.4916,
+        "first_place_probability": 0.2034
+      },
+      {
+        "group": "J",
+        "team": "Algeria",
+        "fifa_code": "ALG",
+        "qualify_probability": 0.4283,
+        "first_place_probability": 0.1733
+      },
+      {
+        "group": "J",
+        "team": "Jordan",
+        "fifa_code": "JOR",
+        "qualify_probability": 0.2977,
+        "first_place_probability": 0.1012
+      }
+    ],
+    "K": [
+      {
+        "group": "K",
+        "team": "Portugal",
+        "fifa_code": "POR",
+        "qualify_probability": 0.678,
+        "first_place_probability": 0.3875
+      },
+      {
+        "group": "K",
+        "team": "Colombia",
+        "fifa_code": "COL",
+        "qualify_probability": 0.6711,
+        "first_place_probability": 0.371
+      },
+      {
+        "group": "K",
+        "team": "Uzbekistan",
+        "fifa_code": "UZB",
+        "qualify_probability": 0.345,
+        "first_place_probability": 0.1322
+      },
+      {
+        "group": "K",
+        "team": "Congo DR",
+        "fifa_code": "COD",
+        "qualify_probability": 0.3059,
+        "first_place_probability": 0.1093
+      }
+    ],
+    "L": [
+      {
+        "group": "L",
+        "team": "England",
+        "fifa_code": "ENG",
+        "qualify_probability": 0.7498,
+        "first_place_probability": 0.4526
+      },
+      {
+        "group": "L",
+        "team": "Croatia",
+        "fifa_code": "CRO",
+        "qualify_probability": 0.654,
+        "first_place_probability": 0.3274
+      },
+      {
+        "group": "L",
+        "team": "Panama",
+        "fifa_code": "PAN",
+        "qualify_probability": 0.4038,
+        "first_place_probability": 0.159
+      },
+      {
+        "group": "L",
+        "team": "Ghana",
+        "fifa_code": "GHA",
+        "qualify_probability": 0.1924,
+        "first_place_probability": 0.061
+      }
+    ]
+  },
+  "tournament_probabilities": [
+    {
+      "team": "Spain",
+      "fifa_code": "ESP",
+      "round_of_32_probability": 0.9388,
+      "round_of_16_probability": 0.6888,
+      "quarterfinal_probability": 0.4822,
+      "semifinal_probability": 0.3287,
+      "final_probability": 0.2147,
+      "champion_probability": 0.1416
+    },
+    {
+      "team": "United States",
+      "fifa_code": "USA",
+      "round_of_32_probability": 0.9594,
+      "round_of_16_probability": 0.6968,
+      "quarterfinal_probability": 0.493,
+      "semifinal_probability": 0.3298,
+      "final_probability": 0.2128,
+      "champion_probability": 0.1345
+    },
+    {
+      "team": "Argentina",
+      "fifa_code": "ARG",
+      "round_of_32_probability": 0.8955,
+      "round_of_16_probability": 0.6267,
+      "quarterfinal_probability": 0.4274,
+      "semifinal_probability": 0.276,
+      "final_probability": 0.1722,
+      "champion_probability": 0.1004
+    },
+    {
+      "team": "France",
+      "fifa_code": "FRA",
+      "round_of_32_probability": 0.8674,
+      "round_of_16_probability": 0.5679,
+      "quarterfinal_probability": 0.3671,
+      "semifinal_probability": 0.2219,
+      "final_probability": 0.1323,
+      "champion_probability": 0.0755
+    },
+    {
+      "team": "England",
+      "fifa_code": "ENG",
+      "round_of_32_probability": 0.8829,
+      "round_of_16_probability": 0.5749,
+      "quarterfinal_probability": 0.35,
+      "semifinal_probability": 0.2024,
+      "final_probability": 0.1114,
+      "champion_probability": 0.0588
+    },
+    {
+      "team": "Portugal",
+      "fifa_code": "POR",
+      "round_of_32_probability": 0.8296,
+      "round_of_16_probability": 0.5112,
+      "quarterfinal_probability": 0.2991,
+      "semifinal_probability": 0.1659,
+      "final_probability": 0.0869,
+      "champion_probability": 0.0461
+    },
+    {
+      "team": "Mexico",
+      "fifa_code": "MEX",
+      "round_of_32_probability": 0.9144,
+      "round_of_16_probability": 0.5535,
+      "quarterfinal_probability": 0.3188,
+      "semifinal_probability": 0.1731,
+      "final_probability": 0.0899,
+      "champion_probability": 0.0429
+    },
+    {
+      "team": "Australia",
+      "fifa_code": "AUS",
+      "round_of_32_probability": 0.8874,
+      "round_of_16_probability": 0.5376,
+      "quarterfinal_probability": 0.3156,
+      "semifinal_probability": 0.1675,
+      "final_probability": 0.0852,
+      "champion_probability": 0.0421
+    },
+    {
+      "team": "Colombia",
+      "fifa_code": "COL",
+      "round_of_32_probability": 0.8236,
+      "round_of_16_probability": 0.512,
+      "quarterfinal_probability": 0.3012,
+      "semifinal_probability": 0.1653,
+      "final_probability": 0.0826,
+      "champion_probability": 0.041
+    },
+    {
+      "team": "Ecuador",
+      "fifa_code": "ECU",
+      "round_of_32_probability": 0.8589,
+      "round_of_16_probability": 0.4977,
+      "quarterfinal_probability": 0.2784,
+      "semifinal_probability": 0.1493,
+      "final_probability": 0.0724,
+      "champion_probability": 0.0332
+    },
+    {
+      "team": "Netherlands",
+      "fifa_code": "NED",
+      "round_of_32_probability": 0.8191,
+      "round_of_16_probability": 0.4892,
+      "quarterfinal_probability": 0.2733,
+      "semifinal_probability": 0.1393,
+      "final_probability": 0.0688,
+      "champion_probability": 0.0321
+    },
+    {
+      "team": "Germany",
+      "fifa_code": "GER",
+      "round_of_32_probability": 0.8555,
+      "round_of_16_probability": 0.4947,
+      "quarterfinal_probability": 0.2698,
+      "semifinal_probability": 0.137,
+      "final_probability": 0.066,
+      "champion_probability": 0.0306
+    },
+    {
+      "team": "Norway",
+      "fifa_code": "NOR",
+      "round_of_32_probability": 0.7404,
+      "round_of_16_probability": 0.4217,
+      "quarterfinal_probability": 0.2272,
+      "semifinal_probability": 0.1136,
+      "final_probability": 0.0555,
+      "champion_probability": 0.0257
+    },
+    {
+      "team": "Croatia",
+      "fifa_code": "CRO",
+      "round_of_32_probability": 0.8123,
+      "round_of_16_probability": 0.4586,
+      "quarterfinal_probability": 0.2386,
+      "semifinal_probability": 0.1142,
+      "final_probability": 0.0553,
+      "champion_probability": 0.0245
+    },
+    {
+      "team": "Japan",
+      "fifa_code": "JPN",
+      "round_of_32_probability": 0.7881,
+      "round_of_16_probability": 0.4425,
+      "quarterfinal_probability": 0.234,
+      "semifinal_probability": 0.1179,
+      "final_probability": 0.0528,
+      "champion_probability": 0.0227
+    },
+    {
+      "team": "Belgium",
+      "fifa_code": "BEL",
+      "round_of_32_probability": 0.8292,
+      "round_of_16_probability": 0.4554,
+      "quarterfinal_probability": 0.2354,
+      "semifinal_probability": 0.1121,
+      "final_probability": 0.0525,
+      "champion_probability": 0.0217
+    },
+    {
+      "team": "Uruguay",
+      "fifa_code": "URY",
+      "round_of_32_probability": 0.7898,
+      "round_of_16_probability": 0.4377,
+      "quarterfinal_probability": 0.2211,
+      "semifinal_probability": 0.1103,
+      "final_probability": 0.0506,
+      "champion_probability": 0.0189
+    },
+    {
+      "team": "South Korea",
+      "fifa_code": "KOR",
+      "round_of_32_probability": 0.8368,
+      "round_of_16_probability": 0.4482,
+      "quarterfinal_probability": 0.2264,
+      "semifinal_probability": 0.1066,
+      "final_probability": 0.0484,
+      "champion_probability": 0.0182
+    },
+    {
+      "team": "Senegal",
+      "fifa_code": "SEN",
+      "round_of_32_probability": 0.69,
+      "round_of_16_probability": 0.3639,
+      "quarterfinal_probability": 0.1737,
+      "semifinal_probability": 0.0818,
+      "final_probability": 0.0359,
+      "champion_probability": 0.014
+    },
+    {
+      "team": "Austria",
+      "fifa_code": "AUT",
+      "round_of_32_probability": 0.6844,
+      "round_of_16_probability": 0.3496,
+      "quarterfinal_probability": 0.163,
+      "semifinal_probability": 0.0721,
+      "final_probability": 0.0291,
+      "champion_probability": 0.0095
+    },
+    {
+      "team": "Scotland",
+      "fifa_code": "SCO",
+      "round_of_32_probability": 0.8025,
+      "round_of_16_probability": 0.3852,
+      "quarterfinal_probability": 0.1657,
+      "semifinal_probability": 0.069,
+      "final_probability": 0.0244,
+      "champion_probability": 0.0085
+    },
+    {
+      "team": "Iran",
+      "fifa_code": "IRN",
+      "round_of_32_probability": 0.7306,
+      "round_of_16_probability": 0.3446,
+      "quarterfinal_probability": 0.149,
+      "semifinal_probability": 0.0544,
+      "final_probability": 0.0205,
+      "champion_probability": 0.0071
+    },
+    {
+      "team": "Algeria",
+      "fifa_code": "ALG",
+      "round_of_32_probability": 0.6145,
+      "round_of_16_probability": 0.2858,
+      "quarterfinal_probability": 0.1166,
+      "semifinal_probability": 0.0454,
+      "final_probability": 0.0161,
+      "champion_probability": 0.0058
+    },
+    {
+      "team": "Canada",
+      "fifa_code": "CAN",
+      "round_of_32_probability": 0.7722,
+      "round_of_16_probability": 0.3554,
+      "quarterfinal_probability": 0.1543,
+      "semifinal_probability": 0.0598,
+      "final_probability": 0.0206,
+      "champion_probability": 0.0055
+    },
+    {
+      "team": "Panama",
+      "fifa_code": "PAN",
+      "round_of_32_probability": 0.6275,
+      "round_of_16_probability": 0.2683,
+      "quarterfinal_probability": 0.1066,
+      "semifinal_probability": 0.0394,
+      "final_probability": 0.013,
+      "champion_probability": 0.0035
+    },
+    {
+      "team": "Egypt",
+      "fifa_code": "EGY",
+      "round_of_32_probability": 0.6518,
+      "round_of_16_probability": 0.2626,
+      "quarterfinal_probability": 0.0991,
+      "semifinal_probability": 0.0335,
+      "final_probability": 0.0115,
+      "champion_probability": 0.0034
+    },
+    {
+      "team": "Ivory Coast",
+      "fifa_code": "CIV",
+      "round_of_32_probability": 0.6514,
+      "round_of_16_probability": 0.2601,
+      "quarterfinal_probability": 0.0957,
+      "semifinal_probability": 0.0346,
+      "final_probability": 0.0097,
+      "champion_probability": 0.0034
+    },
+    {
+      "team": "Uzbekistan",
+      "fifa_code": "UZB",
+      "round_of_32_probability": 0.5443,
+      "round_of_16_probability": 0.2324,
+      "quarterfinal_probability": 0.0913,
+      "semifinal_probability": 0.035,
+      "final_probability": 0.0121,
+      "champion_probability": 0.0033
+    },
+    {
+      "team": "Sweden",
+      "fifa_code": "SWE",
+      "round_of_32_probability": 0.5894,
+      "round_of_16_probability": 0.2515,
+      "quarterfinal_probability": 0.0952,
+      "semifinal_probability": 0.0364,
+      "final_probability": 0.0116,
+      "champion_probability": 0.0033
+    },
+    {
+      "team": "Morocco",
+      "fifa_code": "MAR",
+      "round_of_32_probability": 0.7002,
+      "round_of_16_probability": 0.2817,
+      "quarterfinal_probability": 0.104,
+      "semifinal_probability": 0.0353,
+      "final_probability": 0.0102,
+      "champion_probability": 0.0031
+    },
+    {
+      "team": "Brazil",
+      "fifa_code": "BRA",
+      "round_of_32_probability": 0.6978,
+      "round_of_16_probability": 0.2836,
+      "quarterfinal_probability": 0.1034,
+      "semifinal_probability": 0.0357,
+      "final_probability": 0.0115,
+      "champion_probability": 0.0028
+    },
+    {
+      "team": "Switzerland",
+      "fifa_code": "SUI",
+      "round_of_32_probability": 0.673,
+      "round_of_16_probability": 0.2633,
+      "quarterfinal_probability": 0.0937,
+      "semifinal_probability": 0.0302,
+      "final_probability": 0.0088,
+      "champion_probability": 0.0026
+    },
+    {
+      "team": "Congo DR",
+      "fifa_code": "COD",
+      "round_of_32_probability": 0.4769,
+      "round_of_16_probability": 0.185,
+      "quarterfinal_probability": 0.0618,
+      "semifinal_probability": 0.0191,
+      "final_probability": 0.006,
+      "champion_probability": 0.002
+    },
+    {
+      "team": "Qatar",
+      "fifa_code": "QAT",
+      "round_of_32_probability": 0.657,
+      "round_of_16_probability": 0.2593,
+      "quarterfinal_probability": 0.0974,
+      "semifinal_probability": 0.0324,
+      "final_probability": 0.0102,
+      "champion_probability": 0.0019
+    },
+    {
+      "team": "Jordan",
+      "fifa_code": "JOR",
+      "round_of_32_probability": 0.4845,
+      "round_of_16_probability": 0.1947,
+      "quarterfinal_probability": 0.0705,
+      "semifinal_probability": 0.0232,
+      "final_probability": 0.0063,
+      "champion_probability": 0.0015
+    },
+    {
+      "team": "Bosnia-Herzegovina",
+      "fifa_code": "BIH",
+      "round_of_32_probability": 0.5939,
+      "round_of_16_probability": 0.2106,
+      "quarterfinal_probability": 0.0672,
+      "semifinal_probability": 0.0188,
+      "final_probability": 0.0049,
+      "champion_probability": 0.0015
+    },
+    {
+      "team": "Tunisia",
+      "fifa_code": "TUN",
+      "round_of_32_probability": 0.4866,
+      "round_of_16_probability": 0.1819,
+      "quarterfinal_probability": 0.057,
+      "semifinal_probability": 0.0173,
+      "final_probability": 0.0047,
+      "champion_probability": 0.0012
+    },
+    {
+      "team": "Saudi Arabia",
+      "fifa_code": "KSA",
+      "round_of_32_probability": 0.45,
+      "round_of_16_probability": 0.1457,
+      "quarterfinal_probability": 0.044,
+      "semifinal_probability": 0.0127,
+      "final_probability": 0.0034,
+      "champion_probability": 0.001
+    },
+    {
+      "team": "Cape Verde Islands",
+      "fifa_code": "CPV",
+      "round_of_32_probability": 0.442,
+      "round_of_16_probability": 0.1471,
+      "quarterfinal_probability": 0.0422,
+      "semifinal_probability": 0.0129,
+      "final_probability": 0.003,
+      "champion_probability": 0.001
+    },
+    {
+      "team": "Czechia",
+      "fifa_code": "CZE",
+      "round_of_32_probability": 0.5568,
+      "round_of_16_probability": 0.1842,
+      "quarterfinal_probability": 0.0563,
+      "semifinal_probability": 0.0141,
+      "final_probability": 0.0041,
+      "champion_probability": 0.0009
+    },
+    {
+      "team": "Iraq",
+      "fifa_code": "IRQ",
+      "round_of_32_probability": 0.387,
+      "round_of_16_probability": 0.143,
+      "quarterfinal_probability": 0.0461,
+      "semifinal_probability": 0.013,
+      "final_probability": 0.0027,
+      "champion_probability": 0.0009
+    },
+    {
+      "team": "Paraguay",
+      "fifa_code": "PAR",
+      "round_of_32_probability": 0.4399,
+      "round_of_16_probability": 0.1333,
+      "quarterfinal_probability": 0.0379,
+      "semifinal_probability": 0.0105,
+      "final_probability": 0.0026,
+      "champion_probability": 0.0006
+    },
+    {
+      "team": "New Zealand",
+      "fifa_code": "NZL",
+      "round_of_32_probability": 0.4815,
+      "round_of_16_probability": 0.1504,
+      "quarterfinal_probability": 0.0406,
+      "semifinal_probability": 0.0113,
+      "final_probability": 0.0027,
+      "champion_probability": 0.0005
+    },
+    {
+      "team": "Haiti",
+      "fifa_code": "HAI",
+      "round_of_32_probability": 0.4981,
+      "round_of_16_probability": 0.1418,
+      "quarterfinal_probability": 0.0381,
+      "semifinal_probability": 0.0089,
+      "final_probability": 0.002,
+      "champion_probability": 0.0003
+    },
+    {
+      "team": "Ghana",
+      "fifa_code": "GHA",
+      "round_of_32_probability": 0.3487,
+      "round_of_16_probability": 0.1019,
+      "quarterfinal_probability": 0.0269,
+      "semifinal_probability": 0.0065,
+      "final_probability": 0.001,
+      "champion_probability": 0.0002
+    },
+    {
+      "team": "Curaçao",
+      "fifa_code": "CUW",
+      "round_of_32_probability": 0.3145,
+      "round_of_16_probability": 0.0768,
+      "quarterfinal_probability": 0.0162,
+      "semifinal_probability": 0.0025,
+      "final_probability": 0.0005,
+      "champion_probability": 0.0001
+    },
+    {
+      "team": "South Africa",
+      "fifa_code": "RSA",
+      "round_of_32_probability": 0.3375,
+      "round_of_16_probability": 0.0755,
+      "quarterfinal_probability": 0.0163,
+      "semifinal_probability": 0.0017,
+      "final_probability": 0.0005,
+      "champion_probability": 0.0001
+    },
+    {
+      "team": "Turkey",
+      "fifa_code": "TUR",
+      "round_of_32_probability": 0.2864,
+      "round_of_16_probability": 0.0657,
+      "quarterfinal_probability": 0.0116,
+      "semifinal_probability": 0.0016,
+      "final_probability": 0.0001,
+      "champion_probability": 0
+    }
+  ]
+}

@@ -1,10 +1,11 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from ..db import get_db
 from .. import models, schemas
 from ..data_loader import load_matches_from_json, load_teams_from_json, recompute_predictions
 from ..data_providers.data_pipeline import refresh_bookmaker_tips_only, run_pipeline
 from ..match_generator import DEFAULT_FIFA_RAW_PATH, DEFAULT_OUTPUT_PATH, generate_matches_from_fifa_api
+from ..tournament_simulation import run_tournament_monte_carlo
 
 router = APIRouter(tags=["admin"])
 
@@ -106,3 +107,31 @@ def admin_update_bookmaker_tips(db: Session = Depends(get_db)):
     except RuntimeError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     return {"status": "ok", "bookmaker": result}
+
+
+@router.post("/admin/simulate-tournament", response_model=schemas.TournamentSimulationOut)
+def admin_simulate_tournament(
+    simulations: int = Query(default=10000, ge=100, le=100000),
+    seed: int | None = Query(default=None),
+    db: Session = Depends(get_db),
+):
+    try:
+        return run_tournament_monte_carlo(db, simulations=simulations, seed=seed)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+
+@router.get(
+    "/admin/group-qualification-probabilities",
+    response_model=dict[str, list[schemas.GroupQualificationProbability]],
+)
+def admin_group_qualification_probabilities(
+    simulations: int = Query(default=10000, ge=100, le=100000),
+    seed: int | None = Query(default=None),
+    db: Session = Depends(get_db),
+):
+    try:
+        result = run_tournament_monte_carlo(db, simulations=simulations, seed=seed)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return result["group_qualification_probabilities"]

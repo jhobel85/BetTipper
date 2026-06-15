@@ -93,3 +93,29 @@ class UserOut(BaseModel):
 class MatchResult(BaseModel):
     result_home_goals: int
     result_away_goals: int
+
+
+class GroupQualificationProbability(BaseModel):
+    group: str
+    team: str
+    fifa_code: str
+    qualify_probability: float
+    first_place_probability: float
+    position_probabilities: dict[str, float]
+
+
+class TournamentProbability(BaseModel):
+    team: str
+    fifa_code: str
+    round_of_32_probability: float
+    round_of_16_probability: float
+    quarterfinal_probability: float
+    semifinal_probability: float
+    final_probability: float
+    champion_probability: float
+
+
+class TournamentSimulationOut(BaseModel):
+    simulations: int
+    group_qualification_probabilities: dict[str, list[GroupQualificationProbability]]
+    tournament_probabilities: list[TournamentProbability]

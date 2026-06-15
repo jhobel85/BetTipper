@@ -59,6 +59,8 @@ curl -X POST http://localhost:8000/api/v1/admin/recompute-predictions
 Also available:
 - `POST /api/v1/admin/matches/{match_id}/result` (stores result and recalculates user points)
 - `POST /api/v1/admin/update-bookmaker-tips` (refreshes bookmaker tips/odds-based suggestions)
+- `POST /api/v1/admin/simulate-tournament?simulations=10000` (Monte-Carlo full tournament simulation)
+- `GET /api/v1/admin/group-qualification-probabilities?simulations=10000` (group qualification probabilities)
 
 ### OddsPortal source (preferred for bookmaker tips)
 
